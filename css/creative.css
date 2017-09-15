@@ -7,6 +7,7 @@ html {
 body {
     font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
     overflow-x: hidden;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 hr {
@@ -38,8 +39,6 @@ h5,
 h6 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
-
-
 
 .bg-primary {
     background-color: #F05F40 !important;
@@ -267,7 +266,6 @@ header.masthead .header-content .header-content-inner p {
 
 }
 
-
 .landing-hero {
     padding-top: 45Vh;
     color: white;
@@ -275,7 +273,7 @@ header.masthead .header-content .header-content-inner p {
 }
 
 #landing {
-    height:100vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -301,7 +299,7 @@ header.masthead .header-content .header-content-inner p {
 }
 
 .padding-contact {
-    margin-left: 54vh;
+    margin-left: 60vh;
     margin-top: -69vh;
 }
 
@@ -327,7 +325,6 @@ header.masthead .header-content .header-content-inner p {
 
 }
 
-
 video {
     position: fixed;
     top: 50%;
@@ -342,6 +339,7 @@ video {
     background-size: cover;
     transition: 1s opacity;
 }
+
 .stopfade {
     opacity: .5;
 }
@@ -412,7 +410,7 @@ video {
     transition: all .2s ease-in-out;
 }
 
-.hidden-about h1:hover{
+.hidden-about h1:hover {
     transform: scale(1.01);
     transition: all .2s ease-in-out;
 }
@@ -428,15 +426,9 @@ video {
 }
 
 .hidden-about:hover img {
-    right:0;
+    right: 0;
     transition: right .2s ease-in-out;
 }
-
-/*
-#about-first:hover .about-second-h1 {
-    margin-top:10vh;
-}
-*/
 
 #about-second {
     height: 50vh;
@@ -465,10 +457,103 @@ video {
     margin: 50px auto 0;
 }
 
+.hidden {
+    display: none;
+}
+/*asasadasdasd*/
+.sidenavLeft {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
+.sidenavRight {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
+.sidenavBottom {
+    height: 0vh; /* 100% Full-height */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    bottom: -10vh;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
 
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+label {
+    display: inline-block;
+}
+
+.contact-form {
+    width: 91%;
+    margin-left: 2%;
+    float: left;
+    padding-top: 20px;
+}
+
+.contact-form h3 {
+    padding-right:230px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 375px;
+    padding: 3%;
+    margin: 2% 8%;
+    color: #242424;
+    border: none;
+    border-bottom: 1px solid gray;
+    display: block;
+}
+
+.contact-form input::placeholder,
+.container .contact-form textarea::placeholder {
+    color: #434343;
+}
+
+.contact-form .btn-send {
+    background: #ffe400;
+    width: 180px;
+    height: 60px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin: 2% 8%;
+    border: none;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+/*asasadasdasd*/
 .cube {
     width: 250px;
     height: 100px;
@@ -482,11 +567,13 @@ video {
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
+
 /* The two faces of the cube */
 .default-state,
 .active-state {
     height: 100px;
 }
+
 /* Position the faces */
 .default-state {
     -webkit-transform: translateZ(50px);
@@ -495,6 +582,7 @@ video {
     -o-transform: translateZ(50px);
     transform: translateZ(50px);
 }
+
 .flip-to-top .active-state {
     -webkit-transform: rotateX(90deg) translateZ(150px);
     -moz-transform: rotateX(90deg) translateZ(150px);
@@ -502,6 +590,7 @@ video {
     -o-transform: rotateX(90deg) translateZ(150px);
     transform: rotateX(90deg) translateZ(150px);
 }
+
 .flip-to-bottom .active-state {
     -webkit-transform: rotateX(-90deg) translateZ(-50px);
     -moz-transform: rotateX(-90deg) translateZ(-50px);
@@ -509,6 +598,7 @@ video {
     -o-transform: rotateX(-90deg) translateZ(-50px);
     transform: rotateX(-90deg) translateZ(-50px);
 }
+
 /* Rotate the cube */
 .cube.flip-to-top:hover {
     -webkit-transform: rotateX(-89deg);
@@ -517,6 +607,7 @@ video {
     -o-transform: rotateX(-89deg);
     transform: rotateX(-89deg);
 }
+
 .cube.flip-to-bottom:hover {
     -webkit-transform: rotateX(89deg);
     -moz-transform: rotateX(89deg);
@@ -524,12 +615,14 @@ video {
     -o-transform: rotateX(89deg);
     transform: rotateX(89deg);
 }
+
 /* END CORE CSS */
 /* Demo styling */
 .cube {
     text-align: center;
     margin: 0 auto;
 }
+
 .default-state,
 .active-state {
     background: rgba(46, 204, 113, 0);
@@ -542,12 +635,15 @@ video {
     -o-transition: background 250ms ease;
     transition: background 250ms ease;
 }
+
 .cube:hover .default-state {
     background: rgba(39, 175, 97, 0);
 }
+
 .active-state {
     background: rgba(39, 175, 97, 0);
 }
+
 #flipto {
     display: block;
     text-align: center;
@@ -763,7 +859,7 @@ fieldset[disabled] .btn-primary:hover {
     padding: 15px 30px;
 }
 
-@media  screen and (max-width: 1367px) {
+@media screen and (max-width: 1367px) {
     body {
         overflow-x: hidden;
     }
