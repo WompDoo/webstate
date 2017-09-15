@@ -416,7 +416,7 @@ video {
 }
 
 .hidden-about img {
-    right: 231px;
+   /* right: 231px;*/
     width: 46%;
     padding-top: 2vh;
     position: absolute;
