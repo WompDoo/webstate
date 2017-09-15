@@ -763,4 +763,31 @@ fieldset[disabled] .btn-primary:hover {
     padding: 15px 30px;
 }
 
+@media  screen and (max-width: 1367px) {
+    body {
+        overflow-x: hidden;
+    }
 
+    .padding-contact {
+        margin-left: 32vh;
+    }
+
+    .about-text {
+        margin-left: -14px;
+    }
+
+    .about-what {
+        margin-left: 14px;
+    }
+
+    .hidden-about h1 {
+        font-size: 415%;
+    }
+
+    .hidden-about img {
+        right: 146px;
+        width: 46%;
+        padding-top: 5vh;
+    }
+
+}
