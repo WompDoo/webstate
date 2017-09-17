@@ -53,9 +53,7 @@
         </div>
     </nav>
     <div id="landing">
-        <video id="bgvid" playsinline autoplay muted loop>
-            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-            <!--<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">-->
+        <video poster="img/header2.jpeg" id="bgvid" playsinline autoplay muted loop>
             <source src="img/346061251.mp4" type="video/mp4">
         </video>
         <h1 class="text-center landing-hero">We make your projects a reality</h1>
@@ -175,16 +173,20 @@
         function openNavLeft() {
             document.getElementById("mySidenavLeft").style.width = "100vw";
             document.getElementById("main").style.marginLeft = "100vw";
+            $('body').addClass('stop-scrolling');
+
         }
 
         function openNavRight() {
             document.getElementById("mySidenavRight").style.width = "100vw";
             document.getElementById("main").style.marginRight = "100vw";
+            $('body').addClass('stop-scrolling');
         }
 
         function openNavBottom() {
             document.getElementById("mySidenavBottom").style.height = "110vh";
             document.getElementById("main").style.marginBottom = "110vh";
+            $('body').addClass('stop-scrolling');
 
         }
 
@@ -192,54 +194,188 @@
         function closeNavLeft() {
             document.getElementById("mySidenavLeft").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
+            $('body').removeClass('stop-scrolling')
+
         }
 
         function closeNavRight() {
             document.getElementById("mySidenavRight").style.width = "0";
             document.getElementById("main").style.marginRight = "0";
+            $('body').removeClass('stop-scrolling')
         }
 
         function closeNavBottom() {
             document.getElementById("mySidenavBottom").style.height = "0";
             document.getElementById("main").style.marginBottom = "0";
+            $('body').removeClass('stop-scrolling')
 
         }
     </script>
-    <div id="mySidenavLeft" class="sidenavLeft text-center">
-        <button onclick="closeNavLeft()">X</button>
-        <div class="col-md-4 contact-form">
-            <form>
-                <label><h3>name</h3><input type="text" name="name"/></label>
-                <label><h3>Asdasdasdasd</h3><input type="email" name="e-mail"/></label>
-                <label><h3>Stufff</h3> <textarea class="col-xs-12" name="text" id="text" rows="3"
-                ></textarea></label>
+    <div id="mySidenavLeft" class="sidenavLeft text-right">
+        <h2 class=" text-center">Job application</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-md-12 contact-form">
+                    <form>
+                        <legend class="text-left">General Info</legend>
+                        <label><h5>Name*</h5><input type="text" required name="name"/></label>
+                        <label><h5>Last name*</h5><input required type="text" name="lastname"/></label>
+                        <label><h5>E-Mail*</h5><input required type="email" name="e-mail"/></label>
+                        <label><h5>Phone</h5><input type="tel" name="phone"/></label>
+                        <legend class="text-left">Purpose</legend>
+                        <ul class="radio">
+                            <li>
+                                <input type="radio" id="f-option" name="selector">
+                                <label for="f-option">Work</label>
 
-            </form>
+                                <div class="check"></div>
+                            </li>
+
+                            <li>
+                                <input type="radio" id="s-option" name="selector">
+                                <label for="s-option">Internship</label>
+
+                                <div class="check">
+                                    <div class="inside"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <legend class="text-left">Skills</legend>
+                        <div class="text-left checkbox">
+                            <p>
+                                <input type="checkbox" id="test1"/>
+                                <label for="test1">lorem</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test2"/>
+                                <label for="test2">ipsum</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test3"/>
+                                <label for="test3">lorem</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="test4"/>
+                                <label for="test4">ipsum</label>
+                            </p>
+                        </div>
+                        <legend class="text-left">Tell us more</legend>
+                        <label><h5>Message</h5> <textarea class="col-xs-12" name="text" id="text" rows="5"
+                        ></textarea></label>
+
+                        <label><h5>CV</h5><input type="file" class="form-control-file" id="exampleInputFile"
+                                                 aria-describedby="fileHelp"></label>
+                        <br>
+                        <button type="submit" class="btn btn-primary submit">Apply now</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <button class="close" onclick="closeNavLeft()">X</button>
         </div>
     </div>
-    <div id="mySidenavRight" class="sidenavRight text-center">
-        <button onclick="closeNavRight()">X</button>
-        <div class="col-md-4 contact-form">
-            <form>
-                <label><h3>name</h3><input type="text" name="name"/></label>
-                <label><h3>Asdasdasdasd</h3><input type="email" name="e-mail"/></label>
-                <label><h3>Stufff</h3> <textarea class="col-xs-12" name="text" rows="3"
-                ></textarea></label>
+    <div id="mySidenavRight" class="sidenavRight text-right">
+        <h2 class=" text-center">Start a new project</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-md-12 contact-form">
+                    <form>
+                        <legend class="text-left">General Info</legend>
+                        <label><h5>Name*</h5><input type="text" required name="name"/></label>
+                        <label><h5>Last name*</h5><input required type="text" name="lastname"/></label>
+                        <label><h5>E-Mail*</h5><input required type="email" name="e-mail"/></label>
+                        <label><h5>Phone</h5><input type="tel" name="phone"/></label>
+                        <label><h5>Company</h5><input type="text" name="company"/></label>
+                        <legend class="text-left">Budget</legend>
+                        <div class="col-md-6" style="margin-left: 51vh;">
+                            <label>Budget Estimate</label>
+                            <div id="slider-range-min"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" id="amount" readonly>
+                        </div>
+                        <legend class="text-left">Skills needed</legend>
+                        <div class="row checkbox">
+                            <div class="col-lg-6 text-left ">
+                                <p>
+                                    <input type="checkbox" id="test1"/>
+                                    <label for="test1">lorem</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test2"/>
+                                    <label for="test2">ipsum</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test3"/>
+                                    <label for="test3">lorem</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test4"/>
+                                    <label for="test4">ipsum</label>
+                                </p>
+                            </div>
+                            <div class="col-lg-6 text-left">
+                                <p>
+                                    <input type="checkbox" id="test1"/>
+                                    <label for="test1">lorem</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test2"/>
+                                    <label for="test2">ipsum</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test3"/>
+                                    <label for="test3">lorem</label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="test4"/>
+                                    <label for="test4">ipsum</label>
+                                </p>
+                            </div>
+                        </div>
+                        <legend class="text-left">Tell us more</legend>
+                        <label><h5>Message</h5> <textarea class="col-xs-12" name="text" id="text" rows="3"
+                        ></textarea></label>
 
-            </form>
+                        <label><h5>Documents</h5><input type="file" class="form-control-file" id="exampleInputFile"
+                                                 aria-describedby="fileHelp"></label>
+                        <br>
+                        <button type="submit" class="btn btn-primary submit">Make it a reality</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <button class="close" onclick="closeNavRight()">X</button>
         </div>
     </div>
 
-    <div id="mySidenavBottom" class="sidenavBottom text-center">
-        <button onclick="closeNavBottom()">X</button>
-        <div class="col-md-4 contact-form">
-            <form>
-                <label><h3>name</h3><input type="text" name="name"/></label>
-                <label><h3>Asdasdasdasd</h3><input type="email" name="e-mail"/></label>
-                <label><h3>Stufff</h3> <textarea class="col-xs-12" name="text" rows="3"
-                ></textarea></label>
+    <div id="mySidenavBottom" class="sidenavBottom text-right">
+        <h2 class=" text-center">Contact us</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="col-md-12 contact-form">
+                    <form>
+                        <legend class="text-left">General Info</legend>
+                        <label><h5>Name*</h5><input type="text" required name="name"/></label>
+                        <label><h5>Last name*</h5><input required type="text" name="lastname"/></label>
+                        <label><h5>E-Mail*</h5><input required type="email" name="e-mail"/></label>
+                        <label><h5>Phone</h5><input type="tel" name="phone"/></label>
+                        <legend class="text-left">Say Hello</legend>
+                        <label><h5>Message*</h5> <textarea class="col-xs-12" name="text" required id="text" rows="5"
+                        ></textarea></label>
 
-            </form>
+                        <label><h5>Documents</h5><input type="file" class="form-control-file" id="exampleInputFile"
+                                                        aria-describedby="fileHelp"></label>
+                        <br>
+                        <button type="submit" class="btn btn-primary submit">Contact us</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <button class="close" onclick="closeNavBottom()">X</button>
         </div>
     </div>
 
@@ -289,6 +425,7 @@
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="vendor/popper/popper.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
