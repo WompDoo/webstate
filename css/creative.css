@@ -1306,8 +1306,25 @@ fieldset[disabled] .btn-primary:hover {
         overflow-x: hidden;
     }
 
+    .borderMaster {
+        width:175vh;
+        height: 77vh;
+    }
+
     .landing-hero {
         font-size:350%;
+    }
+
+    #contact {
+        height: 145vh;
+    }
+
+    #services {
+        padding-top: 40px;
+    }
+
+    #about-second {
+        padding-top: 140px;
     }
 
     .padding-contact {
@@ -1348,7 +1365,12 @@ fieldset[disabled] .btn-primary:hover {
 
     }
 
+    .front, .underside {
+        line-height: 60px;
+    }
+
     .button-hidden {
+        margin-top: 6vh;
         margin-left: 4vh;
 
     }
@@ -1364,11 +1386,17 @@ fieldset[disabled] .btn-primary:hover {
     }
 
     .blue {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
 
     .contactPad {
-        padding-left: 24vh;
+        padding-top: 88vh;
+        padding-left:37vh;
+    }
+
+    video {
+        top: 54%;
+        width: 70%;
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
