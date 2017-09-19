@@ -1380,7 +1380,7 @@ fieldset[disabled] .btn-primary:hover {
     }
 
     button {
-
+        font-size: 80%;
         margin-left: 20px;
 
     }
